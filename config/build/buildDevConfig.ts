@@ -16,6 +16,7 @@ const buildDevConfig = (options: BuildOptions): TDevBuild => {
         devServer: {
           port,
           open: true,
+          historyApiFallback: true,
         },
       }
     : null;
