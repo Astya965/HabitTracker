@@ -21,7 +21,7 @@ const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
       extensions: [".tsx", ".ts", ".js"],
     },
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     plugins: buildPlugins(paths.html),
     ...buildDevConfig(options),

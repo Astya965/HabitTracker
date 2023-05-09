@@ -4,6 +4,9 @@ node_modules/
 # Optional npm cache directory
 .npm
 
+# Build
+build/
+
 # Editor
 .vscode
 .vscode-test
