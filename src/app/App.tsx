@@ -4,9 +4,9 @@ import { Route, Routes } from "react-router-dom";
 
 import "./styles/index.scss";
 
-import AboutPageAsync from "./pages/AboutPage/AboutPage.async";
-import MainPageAsync from "./pages/MainPage/MainPage.async";
-import useTheme from "./theme/useTheme";
+import { AboutPage } from "../pages/AboutPage";
+import { MainPage } from "../pages/MainPage";
+import { useTheme } from "entities/theme";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -20,8 +20,8 @@ const App = () => {
       </div>
       <Suspense fallback={"Loading..."}>
         <Routes>
-          <Route path="/about" element={<AboutPageAsync />} />
-          <Route path="/" element={<MainPageAsync />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/" element={<MainPage />} />
         </Routes>
       </Suspense>
     </div>

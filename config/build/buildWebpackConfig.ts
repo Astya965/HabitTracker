@@ -3,6 +3,7 @@ import webpack from "webpack";
 import buildLoaders from "./buildLoaders";
 import buildPlugins from "./buildPlugins";
 import buildDevConfig from "./buildDevConfig";
+import buildResolvers from "./buildResolvers";
 
 import { BuildOptions } from "./types/config";
 
@@ -17,9 +18,7 @@ const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
       path: paths.output,
       clean: true,
     },
-    resolve: {
-      extensions: [".tsx", ".ts", ".js"],
-    },
+    resolve: buildResolvers(paths.src),
     module: {
       rules: buildLoaders(options),
     },
