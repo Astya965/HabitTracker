@@ -17,6 +17,9 @@ const buildDevConfig = (options: BuildOptions): TDevBuild => {
           port,
           open: true,
           historyApiFallback: true,
+          devMiddleware: {
+            index: "player.html",
+          },
         },
       }
     : null;

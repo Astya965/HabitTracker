@@ -5,6 +5,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 const buildPlugins = (path: string): webpack.WebpackPluginInstance[] => {
   return [
     new HTMLWebpackPlugin({
+      filename: "player.html",
       template: path,
     }),
     new webpack.ProgressPlugin(),
