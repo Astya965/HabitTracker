@@ -5,9 +5,17 @@
 
 .app {
   min-height: 100vh;
-
   font: var(--font-l);
   color: var(--primary-text-color);
 
   background: var(--bg-color);
+}
+
+.page-main {
+  display: flex;
+}
+
+.page-content {
+  padding: 20px;
+  flex-grow: 1;
 }

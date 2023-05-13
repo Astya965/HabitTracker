@@ -3,6 +3,7 @@ import { AppRoutes } from "./AppRoutes";
 
 import { useTheme } from "entities/theme";
 import { Header } from "widgets/Header";
+import { Sidebar } from "widgets/Sidebar";
 
 const App = () => {
   const { theme } = useTheme();
@@ -10,7 +11,12 @@ const App = () => {
   return (
     <div className={`app ${theme}`}>
       <Header />
-      <AppRoutes />
+      <main className="page-main">
+        <Sidebar />
+        <div className="page-content">
+          <AppRoutes />
+        </div>
+      </main>
     </div>
   );
 };

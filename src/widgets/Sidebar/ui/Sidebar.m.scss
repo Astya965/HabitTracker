@@ -1,0 +1,17 @@
+.sidebar {
+  height: calc(100vh - var(--navbar-height));
+  width: 300px;
+
+  background-color: var(--additional-color);
+  transition: width 0.5s;
+}
+
+.collapsed {
+    width: 80px;
+}
+
+@media (max-width: 680px) {
+  .sidebar {
+    max-width: 80px;
+  }
+}
