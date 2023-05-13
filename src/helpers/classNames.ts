@@ -14,10 +14,12 @@ const filterClassesByValue = (modificators: TModificators) => {
 
 const getClassNames = (
   mainClass: string,
-  modificators: TModificators,
-  additional: string[]
-) => {
-  return [mainClass, ...additional, filterClassesByValue(modificators)];
+  modificators: TModificators = {},
+  additional: string[] = []
+): string => {
+  return [mainClass, ...additional, filterClassesByValue(modificators)].join(
+    " "
+  );
 };
 
 export default getClassNames;

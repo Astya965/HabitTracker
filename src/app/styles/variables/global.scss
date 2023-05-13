@@ -1,4 +1,5 @@
 :root {
+  // Fonts
   --font-family-main: Helvetica, Arial, sans-serif;
 
   --font-size-m: 16px;
@@ -8,4 +9,7 @@
   --font-size-l: 16px;
   --font-line-l: 24px;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+  // Sizes
+  --navbar-height: 50px;
 }

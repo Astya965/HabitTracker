@@ -1,0 +1,27 @@
+.link {
+  text-decoration: none;
+}
+
+.primary {
+  color: (var(--primary-text-color));
+
+  &:hover {
+    color: (var(--primary-color));
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.secondary {
+  color: var(--secondary-text-color);
+
+  &:hover {
+    color: var(--secondary-color);
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+}
