@@ -1,4 +1,4 @@
-import useTheme from "./lib/useTheme";
+import { useTheme } from "./lib/useTheme";
 import {
   LOCAL_STORAGE_THEME_KEY,
   Theme,
