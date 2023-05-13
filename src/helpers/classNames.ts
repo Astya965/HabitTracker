@@ -12,7 +12,7 @@ const filterClassesByValue = (modificators: TModificators) => {
   );
 };
 
-const getClassNames = (
+export const classNames = (
   mainClass: string,
   modificators: TModificators = {},
   additional: string[] = []
@@ -21,5 +21,3 @@ const getClassNames = (
     " "
   );
 };
-
-export default getClassNames;

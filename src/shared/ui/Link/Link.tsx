@@ -3,7 +3,7 @@ import {
   Link as RouterLink,
   LinkProps as RouterLinkProps,
 } from "react-router-dom";
-import classNames from "helpers/classNames";
+import { classNames } from "helpers/classNames";
 import cls from "./Link.m.scss";
 
 export enum LinkTheme {

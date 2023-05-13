@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-import classNames from "helpers/classNames";
-import { Link, LinkTheme } from "shared/ui/Link/Link";
+import { classNames } from "helpers/classNames";
+import { Link } from "shared/ui/Link/Link";
 
 import cls from "./Navbar.m.scss";
 

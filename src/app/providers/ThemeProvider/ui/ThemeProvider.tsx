@@ -4,7 +4,7 @@ import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "entities/theme";
 const defaultTheme: Theme =
   (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.NORMAL;
 
-const ThemeProdiver: FC = ({ children }) => {
+export const ThemeProdiver: FC = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   const defaultProps = useMemo(() => ({ theme, setTheme }), [theme]);
@@ -15,5 +15,3 @@ const ThemeProdiver: FC = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
-
-export default ThemeProdiver;

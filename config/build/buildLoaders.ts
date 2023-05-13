@@ -34,6 +34,15 @@ const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
     ],
   };
 
+  const svgLoader: webpack.RuleSetRule = {
+    test: /\.svg$/,
+  };
+
+  const imgLoader: webpack.RuleSetRule = {
+    test: /\.(png|jpg|jpeg|gi|ttf)$/i,
+    type: "asset/resource",
+  };
+
   return [typescriptLoader, styleLoader];
 };
 
