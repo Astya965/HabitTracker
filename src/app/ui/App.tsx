@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom";
-
 import "../styles/index.scss";
 import AppRoutes from "./AppRoutes";
 
 import { useTheme } from "entities/theme";
-import { Navbar } from "widgets/Navbar";
+import { Navbar } from "features/Navbar";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
