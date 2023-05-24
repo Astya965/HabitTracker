@@ -1,10 +1,10 @@
 import { ButtonHTMLAttributes, FC } from "react";
-import { classNames } from "helpers/classNames";
+import { classNames } from "shared/helpers/classNames";
 import cls from "./Button.m.scss";
 
 export enum ThemeButton {
   DEFAULT = "default",
-  ICON = "icon",
+  OUTLINE = "outline",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
