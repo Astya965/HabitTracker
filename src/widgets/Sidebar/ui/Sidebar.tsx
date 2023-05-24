@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
-import { classNames } from "helpers/classNames";
+import { classNames } from "shared/helpers/classNames";
 import cls from "./Sidebar.m.scss";
+import { useTranslation } from "react-i18next";
 
 interface SidebarProps {
   className?: string;
@@ -8,6 +9,7 @@ interface SidebarProps {
 
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [collapsed, setCollapsed] = useState(false);
+  const { t } = useTranslation();
 
   const handleToggle = () => setCollapsed((prev) => !prev);
 
@@ -17,7 +19,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
         className,
       ])}
     >
-      <button onClick={handleToggle}>toogle</button>
+      <button onClick={handleToggle}>{t("toogle")}</button>
     </div>
   );
 };
