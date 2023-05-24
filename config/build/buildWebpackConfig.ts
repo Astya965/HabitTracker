@@ -8,7 +8,8 @@ import buildResolvers from "./buildResolvers";
 import { BuildOptions } from "./types/config";
 
 const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
-  const { mode, paths } = options;
+  const { mode, paths, port } = options;
+  const isDev = mode === "development";
 
   return {
     mode,
@@ -22,8 +23,8 @@ const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
     module: {
       rules: buildLoaders(options),
     },
-    plugins: buildPlugins(paths.html),
-    ...buildDevConfig(options),
+    plugins: buildPlugins(paths.html, isDev),
+    ...buildDevConfig(port, isDev),
   };
 };
 

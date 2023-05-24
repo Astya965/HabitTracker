@@ -6,10 +6,7 @@ type TDevBuild = {
   devServer: DevServerConfiguration;
 } | null;
 
-const buildDevConfig = (options: BuildOptions): TDevBuild => {
-  const { mode, port } = options;
-  const isDev = mode === "development";
-
+const buildDevConfig = (port: number, isDev: boolean): TDevBuild => {
   return isDev
     ? {
         devtool: "inline-source-map",
@@ -17,9 +14,6 @@ const buildDevConfig = (options: BuildOptions): TDevBuild => {
           port,
           open: true,
           historyApiFallback: true,
-          devMiddleware: {
-            index: "player.html",
-          },
         },
       }
     : null;
