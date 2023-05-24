@@ -5,8 +5,9 @@ node_modules/
 .npm
 
 # Build
-build/
+/build
 
 # Editor
 .vscode
 .vscode-test
+.DS_Store
